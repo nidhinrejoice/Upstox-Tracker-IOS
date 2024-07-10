@@ -10,6 +10,15 @@ enum AuthError: Error {
     case networkError
     case invalidResponse
 }
+extension Bundle {
+    var clientId: String {
+        return object(forInfoDictionaryKey: "CLIENT_ID") as? String ?? ""
+    }
+    
+    var clientSecret: String {
+        return object(forInfoDictionaryKey: "CLIENT_SECRET") as? String ?? ""
+    }
+}
 
 class AuthRepositoryImpl: AuthRepository {
     func getAccessToken(authCode: String, completion: @escaping (Result<String, Error>) -> Void) {
@@ -17,11 +26,12 @@ class AuthRepositoryImpl: AuthRepository {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        
+        let clientId = Bundle.main.clientId
+        let clientSecret = Bundle.main.clientSecret
         let params = [
             "code": authCode,
-            "client_id": Constants.clientId,
-            "client_secret":  Constants.clientSecret,
+            "client_id": clientId,	
+            "client_secret":  clientSecret,
             "redirect_uri":  Constants.redirectURI,
             "grant_type": "authorization_code"
         ]

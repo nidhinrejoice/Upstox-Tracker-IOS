@@ -53,6 +53,8 @@
 		D44B69032C3D5CCB00BBCE18 /* ProfitLossResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitLossResponse.swift; sourceTree = "<group>"; };
 		D44B69052C3D672400BBCE18 /* AggregatedProfitLoss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatedProfitLoss.swift; sourceTree = "<group>"; };
 		D44B69072C3DB32B00BBCE18 /* ProfitLossViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitLossViewModel.swift; sourceTree = "<group>"; };
+		D472385F2C3E75490066499F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		D47238602C3E772B0066499F /* Upstox-Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Upstox-Tracker-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D4F2609F2C3BFB7B00872CAE /* Upstox Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Upstox Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F260A42C3BFB7B00872CAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D4F260A62C3BFB7D00872CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		D4F260A12C3BFB7B00872CAE /* Upstox Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				D47238602C3E772B0066499F /* Upstox-Tracker-Info.plist */,
 				D4F260D62C3C02BA00872CAE /* data */,
 				D4F260D02C3BFFD900872CAE /* presentation */,
 				D4F260CF2C3BFFD300872CAE /* domain */,
@@ -135,6 +138,7 @@
 				D4F260D92C3C030200872CAE /* UpstoxApp.swift */,
 				D4F260E12C3C097500872CAE /* TokenManager.swift */,
 				D4F260E32C3C0A9000872CAE /* Constants.swift */,
+				D472385F2C3E75490066499F /* Config.xcconfig */,
 			);
 			path = "Upstox Tracker";
 			sourceTree = "<group>";
@@ -397,6 +401,7 @@
 /* Begin XCBuildConfiguration section */
 		D4F260C22C3BFB7D00872CAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D472385F2C3E75490066499F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -458,6 +463,7 @@
 		};
 		D4F260C32C3BFB7D00872CAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D472385F2C3E75490066499F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -511,6 +517,7 @@
 		};
 		D4F260C52C3BFB7D00872CAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D472385F2C3E75490066499F /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -522,6 +529,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Upstox-Tracker-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -550,6 +558,7 @@
 		};
 		D4F260C62C3BFB7D00872CAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D472385F2C3E75490066499F /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -561,6 +570,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Upstox-Tracker-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

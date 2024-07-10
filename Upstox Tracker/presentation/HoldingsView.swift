@@ -30,7 +30,7 @@ struct HoldingsView : View {
     
     var body : some View{
         
-        let urlString = "\(Constants.loginUrl)&client_id=\(Constants.clientId)&redirect_uri=\(Constants.redirectURI)"
+        let urlString = "\(Constants.loginUrl)&client_id=\(Bundle.main.clientId)&redirect_uri=\(Constants.redirectURI)"
         let url = URL(string: urlString)!
         NavigationView {
             VStack(alignment: .leading) {

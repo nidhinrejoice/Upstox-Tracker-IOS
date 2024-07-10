@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  Upstox Tracker
+//
+//  Created by Nidhin Rejoice on 10/07/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+UPSTOX_API_CLIENT_ID = 15ff5c6b-7d2c-47f3-80c6-4753ef65fa0a
+UPSTOX_API_CLIENT_SECRET = kyj80oez7a

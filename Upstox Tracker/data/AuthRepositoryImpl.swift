@@ -10,28 +10,53 @@ enum AuthError: Error {
     case networkError
     case invalidResponse
 }
-extension Bundle {
-    var clientId: String {
-        return object(forInfoDictionaryKey: "CLIENT_ID") as? String ?? ""
+class BaseENV{
+    let dict : NSDictionary
+    init(resourceName : String){
+        guard let filePath =
+                Bundle.main.path(forResource: resourceName, ofType: "plist"), let plist = NSDictionary(contentsOfFile: filePath)
+        else{
+            fatalError("Could'nt find file \(resourceName) plist")
+        }
+        self.dict = plist
+    }
+}
+protocol APIKeyable{
+    var CLIENT_ID : String{get}
+    var CLIENT_SECRET : String{get}
+}
+class DEV_ENV : BaseENV, APIKeyable{
+    var CLIENT_ID: String{
+        dict.object(forKey: "CLIENT_ID") as? String ?? ""
     }
     
-    var clientSecret: String {
-        return object(forInfoDictionaryKey: "CLIENT_SECRET") as? String ?? ""
+    var CLIENT_SECRET: String{
+        dict.object(forKey: "CLIENT_SECRET") as? String ?? ""
+    }
+    
+    init(){
+        super.init(resourceName: "SECRETS")
     }
 }
 
+var ENV : APIKeyable{
+    #if DEBUG
+    return DEV_ENV()
+    #else
+    return DEV_ENV()
+    #endif
+}
 class AuthRepositoryImpl: AuthRepository {
     func getAccessToken(authCode: String, completion: @escaping (Result<String, Error>) -> Void) {
         let url = URL(string: "https://api.upstox.com/v2/login/authorization/token")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        let clientId = Bundle.main.clientId
-        let clientSecret = Bundle.main.clientSecret
+        
         let params = [
             "code": authCode,
-            "client_id": clientId,	
-            "client_secret":  clientSecret,
+            "client_id": ENV.CLIENT_ID,
+            "client_secret":  ENV.CLIENT_SECRET,
             "redirect_uri":  Constants.redirectURI,
             "grant_type": "authorization_code"
         ]

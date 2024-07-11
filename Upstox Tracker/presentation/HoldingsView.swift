@@ -19,7 +19,7 @@ import SwiftUI
 struct HoldingsView : View {
     
     @StateObject private var viewModel: LoginViewModel
-    @State private var selectedSortOption: LoginViewModel.SortOption 
+    @State private var selectedSortOption: LoginViewModel.SortOption
     
     
     init(viewModel: LoginViewModel) {
@@ -30,7 +30,7 @@ struct HoldingsView : View {
     
     var body : some View{
         
-        let urlString = "\(Constants.loginUrl)&client_id=\(Bundle.main.clientId)&redirect_uri=\(Constants.redirectURI)"
+        let urlString = "\(Constants.loginUrl)&client_id=\(ENV.CLIENT_ID)&redirect_uri=\(Constants.redirectURI)"
         let url = URL(string: urlString)!
         NavigationView {
             VStack(alignment: .leading) {

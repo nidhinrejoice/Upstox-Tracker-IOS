@@ -268,10 +268,40 @@
             filePath = "Upstox Tracker/presentation/ProfitLossViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "fetchProfitReport(financialYear:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7CA99E8C-F47B-4BA5-BDE7-4FEE09FF2D71 - 67dad174798a08d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Upstox_Tracker.ProfitLossViewModel.fetchProfitReport(financialYear: Swift.String) -&gt; ()"
+                  moduleName = "Upstox Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nidhinrejoice/Documents/Dev/ios/Upstox%20Tracker/Upstox%20Tracker/presentation/ProfitLossViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58">
+               </Location>
+               <Location
+                  uuid = "7CA99E8C-F47B-4BA5-BDE7-4FEE09FF2D71 - eb2f0a71bb65d241"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Result&lt;Swift.Array&lt;Upstox_Tracker.AggregatedProfitLoss&gt;, Swift.Error&gt;) -&gt; () in Upstox_Tracker.ProfitLossViewModel.fetchProfitReport(financialYear: Swift.String) -&gt; ()"
+                  moduleName = "Upstox Tracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nidhinrejoice/Documents/Dev/ios/Upstox%20Tracker/Upstox%20Tracker/presentation/ProfitLossViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -304,34 +334,50 @@
             endingLineNumber = "35"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38809E2C-A55F-4446-A63A-FA24CC56CD7B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Upstox Tracker/presentation/HoldingsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "body"
+            landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "29F55A06-E93C-420F-A45F-0CE0906083A2 - 442d85ad4db7faa7"
+                  uuid = "38809E2C-A55F-4446-A63A-FA24CC56CD7B - 90847058a6a619ab"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Upstox_Tracker.HoldingsView.body.getter : some"
+                  symbolName = "closure #2 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in Upstox_Tracker.HoldingsView.body.getter : some"
                   moduleName = "Upstox Tracker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nidhinrejoice/Documents/Dev/ios/Upstox%20Tracker/Upstox%20Tracker/presentation/HoldingsView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35">
+                  startingLineNumber = "151"
+                  endingLineNumber = "151">
                </Location>
                <Location
-                  uuid = "29F55A06-E93C-420F-A45F-0CE0906083A2 - 40df598dcb767b7a"
+                  uuid = "38809E2C-A55F-4446-A63A-FA24CC56CD7B - 5799dd77bd5c899e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in Upstox_Tracker.HoldingsView.body.getter : some"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #2 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in Upstox_Tracker.HoldingsView.body.getter : some"
                   moduleName = "Upstox Tracker"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nidhinrejoice/Documents/Dev/ios/Upstox%20Tracker/Upstox%20Tracker/presentation/HoldingsView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35">
+                  startingLineNumber = "151"
+                  endingLineNumber = "151">
                </Location>
             </Locations>
          </BreakpointContent>

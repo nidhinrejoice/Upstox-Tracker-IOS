@@ -1,3 +1,4 @@
 
 *.xcconfig
 Upstox Tracker/SECRETS.plist
+*.xcbkptlist

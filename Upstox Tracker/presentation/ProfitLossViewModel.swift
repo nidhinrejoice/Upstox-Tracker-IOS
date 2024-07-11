@@ -50,10 +50,11 @@ class ProfitLossViewModel: ObservableObject {
     func fetchProfitReport(financialYear  :String){
         DispatchQueue.main.async {
             self.isLoading = false 
+            self.error = nil
         }
-        var finYear = financialYear
+        var finYear = financialYear 
+        finYear = finYear.substring(from: finYear.index(finYear.startIndex,offsetBy: 2))
         finYear.replace("-", with:"")
-        finYear.replace("20",with: "")
         fetchProfitLossReportUseCase.execute(financialYear: finYear){ result in
             self.sortBy = .name
             switch result {

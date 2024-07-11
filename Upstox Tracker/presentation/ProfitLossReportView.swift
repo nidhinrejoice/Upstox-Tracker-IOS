@@ -24,29 +24,35 @@ struct ProfitLossReportView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading){
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(financialYears, id: \.self) { year in
+                            Button(action: {
+                                selectedFinancialYear = year
+                                viewModel.fetchProfitReport(financialYear: year)
+                            }) {
+                                Text(year)
+                                    .padding()
+                                    .background(selectedFinancialYear == year ? Color.green : Color.gray)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(8)
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                }
                 if let error = viewModel.error {
-                    Text("Error: \(error.localizedDescription)")
+                    VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/){
+                        Text("Error: \(error.localizedDescription)")
+                        Button(action: {viewModel.fetchProfitReport(financialYear: selectedFinancialYear)}){
+                            Text("Retry")
+                        }
+                    }
                 }else if(viewModel.isLoading){
                     ProgressView("Fetching profit loss report...")
                 }else{
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(financialYears, id: \.self) { year in
-                                Button(action: {
-                                    selectedFinancialYear = year
-                                    viewModel.fetchProfitReport(financialYear: year)
-                                }) {
-                                    Text(year)
-                                        .padding()
-                                        .background(selectedFinancialYear == year ? Color.green : Color.gray)
-                                        .foregroundColor(.white)
-                                        .cornerRadius(8)
-                                }
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
+                     
                     var totalPNL: Double {
                         viewModel.profitLossReport.reduce(0) { $0 + $1.totalProfit }
                     }
